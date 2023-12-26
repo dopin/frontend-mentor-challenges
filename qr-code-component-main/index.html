@@ -13,16 +13,89 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+
+  <style>
+    :root {
+      /* width */
+      --mobile-width: 375px;
+      --pc-width: 1440px;
+
+      /* colors */
+      --white: hsl(0, 0%, 100%);
+      --light-gray: hsl(212, 45%, 89%);
+      --grayish-blue: hsl(220, 15%, 55%);
+      --dark-blue: hsl(218, 44%, 22%);
+
+      /* fonts */
+      --fz-p: 15px;
+      --ff:  'Outfit', sans-serif;
+
+
+      html, body {
+        background-color: var(--light-gray);
+        min-height: 100%;
+      }
+
+      body {
+        display: grid;
+        place-content: center;
+      }
+
+      .qrcode {
+        font-family: var(--ff);
+        font-size: var(--fz-p);
+
+        
+        border-radius: 16px;
+        padding: 16px;
+        background-color: var(--white);
+
+        width: calc(320px - 32px);
+
+        & img {
+          width: 100%;
+          display: block;
+          border-radius: 8px;
+        }
+
+        & p {
+          text-align: center;
+          margin-right: 16px;
+          margin-left: 16px;
+        }
+
+        .lead {
+          color:  var(--dark-blue);
+          font-weight: 700;
+          font-size: 22px;
+        }
+
+        .paragraph {
+          color: var(--grayish-blue);
+        }
+      }
+
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  Improve your front-end skills by building projects
-
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-  
+<div class="solutions">
+  <div class="qrcode">
+    <img src="images/image-qr-code.png" alt="QR code">
+    <p class="lead">Improve your front-end skills by building projects</p>
+    <p class="paragraph">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+  </div>
+  <hr>
+    
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/dopin">Dopin Ninja</a>.
+    <p>Design: <a href="design/desktop-design.jpg">PC</a>&nbsp;<a href="design/mobile-design.jpg">Mobile</a></a></p>
   </div>
+</div>
 </body>
 </html>
